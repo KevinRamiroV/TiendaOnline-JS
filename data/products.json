@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "name": "Control xBox",
+        "price": 2550,
+        "image": "./assets/img/xBoxController.jpg",
+        "category": ""
+    },
+    {
+        "id": 2,
+        "name": "Lentes RayBan",
+        "price": 1500,
+        "image": "./assets/img/RayBanLentes.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Gorra - Jordan",
+        "price": 1000,
+        "image": "./assets/img/gorro.jpg"
+
+    },
+    {
+        "id": 4,
+        "name": "Mochila Adidas",
+        "price": 2500,
+        "image": "./assets/img/AdidasMochila.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Reloj Casio",
+        "price": 2450,
+        "image": "./assets/img/RelojCasio.jpg"
+
+    },
+    {
+        "id": 6,
+        "name": "Conjunto deportivo",
+        "price": 3250,
+        "image": "./assets/img/conjuntodepo.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Pantalon cargo",
+        "price": 600,
+        "image": "./assets/img/pantaloncargo.jpeg"
+
+    },
+    {
+        "id": 8,
+        "name": "Hoodie Oversized",
+        "price": 1340,
+        "image": "./assets/img/HoodieOversized2.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Chancletas playa",
+        "price": 399,
+        "image": "./assets/img/chanclas.jpg"
+    },
+    {
+        "id": 10,
+        "name": "ChancletasX",
+        "price": 599,
+        "image": "./assets/img/chanclascross.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Chancletas Niño",
+        "price": 300,
+        "image": "./assets/img/chanclasninos.webp"
+    },
+    {
+        "id": 12,
+        "name": "Conjunto deportivo",
+        "price": 3250,
+        "image": "./assets/img/conjuntodepo.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Muscolosa - Yankees",
+        "price": 800,
+        "image": "./assets/img/musculosaYankees.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Muscolosa - Miami",
+        "price": 950,
+        "image": "./assets/img/musculosaMiami.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Muscolosa - Miami (B)",
+        "price": 1000,
+        "image": "./assets/img/miamiblanca.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Tabla de surft",
+        "price": 6500,
+        "image": "./assets/img/tablasurft.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Tabla de surft (XL)",
+        "price": 7500,
+        "image": "./assets/img/tablasurftxl.jpeg"
+    },
+    {
+        "id": 18,
+        "name": "Bolso deportivo",
+        "price": 1200,
+        "image": "./assets/img/bolsodeportivo.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Pantalon cargo",
+        "price": 975,
+        "image": "./assets/img/pantaloncargo.jpeg"
+    }    
+]

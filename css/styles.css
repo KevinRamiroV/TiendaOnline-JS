@@ -1,0 +1,374 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ee5351;
+    color: white;
+}
+
+header h1 {
+    margin-left: 30px;
+}
+
+.cart-icon {
+    cursor: pointer;
+    position: relative;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#cartCount {
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field input{
+    width: 350px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0px 15px;
+    border: 2px solid #0c0c0c;
+    background: white;
+    color: #0c0c0c;
+    outline: none;
+}
+
+.input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #0a0a0a;
+    font-size: 19px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+input:focus{
+    border: 2px solid #8a2c2a;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: 0;
+    font-size: 16px;
+    padding: 5px;
+    padding: 0 15px;
+    background: #bb3331;
+    border-radius: 10px;
+}
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrará las tarjetas horizontalmente */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.spinner {
+    border: 4px solid #bb3331;
+    margin-left: 50%;
+    margin-top: 10%;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: transparent;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Tamaño por defecto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    box-shadow: 0px 1px 10px 2px #949393; /* Efecto al pasar el mouse */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.input-amount {
+    margin: 10px;
+    width: 45px;
+}
+
+.btn {
+    background-color: #ee5351;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4a959b;
+}
+.product-card img {
+    width: 100%;  
+    height: auto;
+    max-height: 200px;  
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.modalFinalize, .modalAlert {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    position: relative;
+}
+
+.modal-contentAlert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: 18% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 25%;
+    position: relative;
+}
+
+.modal-content2 p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0;
+}
+
+.modal-content2 .p-check {
+    color: red;
+}
+
+.modal-content2 p label {
+    width: 100px; /* Ajusta el ancho según tus necesidades */
+}
+
+.modal-content2 input[type="text"],
+.modal-content2 input[type="email"] {
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Checkbox */
+.modal-content2 input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    max-height: 500px; /* Ajusta este valor según lo que necesites */
+    overflow-y: auto;  /* Habilita el scroll vertical */
+    padding: 10px;
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.delete-car {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(25px, auto);
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item:nth-child(odd) {
+    background-color: #f7f3f3;;
+}
+
+.item-price {
+    text-align: end;
+}
+
+.btns-items {
+    margin-left: 50%;
+}
+
+
+.cart-buttons {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.btn-add {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(5, 202, 87);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-add:hover{
+    background-color: rgb(5, 161, 70);
+}
+
+.btn-delete {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(202, 5, 5);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-delete:hover{
+    background-color: rgb(121, 9, 9);
+}
+
+.btn-finalize {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-finalize:hover {
+    background-color: #555;
+}
+
+.btn-continue {
+    padding: 10px 20px;
+    border: none;
+    background-color: #036e42;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-continue:hover {
+    background-color: #04be71;
+}
+
+.btn-bye {
+    margin:  auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #036e42;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-bye:hover {
+    background-color: #04be71;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
