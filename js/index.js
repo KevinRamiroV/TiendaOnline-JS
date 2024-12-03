@@ -30,7 +30,7 @@ const displayProducts = async () => {
     loading.style.display = 'flex';
     await sleep(1500);
 
-    fetch('../data/products.json')
+    fetch('./data/products.json')
         .then(response => response.json())
         .then(products => {
             productsData = products;
